@@ -4,10 +4,35 @@
     <h1>Order #<%= @order.id %></h1>
   </header>
 
+
+
   <div class="order-summary jumbotron">
+    <h3> Dear <%= @order.email %>,  </h3>
     <h4>Thank you for your order!</h4>
+
+  <table class="table table-bordered">
+    <thead class="thead">
+      <tr>
+        <th> Product Image </th>
+        <th> Product Name </th>
+        <th> Product Description </th>
+        <th> Price </th>
+        <th> Quantity </th>
+        <th> Total </th>
+      </tr>
+    </thead>
+
+  <% @order.line_items.each do |item| %>
+    <%= render 'item', product: Product.find(item.product_id), item: item %>
+
+  <% end %>
+
+  </table>
+
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
+
+
