@@ -10,6 +10,19 @@
 
   <%= render 'layouts/top_nav' %>
 
+  <div class="user">
+      <% if current_user %>
+        Hello! <%= current_user.email%> 
+
+        <%= link_to "<button class='btn btn-info'>Logout</button>".html_safe, logout_path, class: 'link'%>
+      <% else %>
+      
+      <%= link_to "<button class='btn btn-info'>Login</button>".html_safe, login_path, class: 'link' %> 
+
+      <%= link_to "<button class='btn btn-info'>Signup</button>".html_safe, signup_path, class: 'link' %> 
+    <% end %>
+  </div>
+
   <main class="container">
     <%= yield %>
   </main>

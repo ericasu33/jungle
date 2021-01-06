@@ -11,7 +11,24 @@ body {
   padding-top: 70px;
 }
 
+button {
+  padding: 1rem;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.link {
+  color: #FFF;
+}
+
+.user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2rem;
+}
+
 // Bootstrap adjustments
 form.button_to {
   display: inline;
 }
+
