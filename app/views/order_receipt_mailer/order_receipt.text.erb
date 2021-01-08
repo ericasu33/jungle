@@ -1,0 +1,13 @@
+Greetings, <%= @user.email %>
+===============================================
+ 
+Below are your order details:
+
+<!-- <% @order.line_items.each do |item| %>
+<% product = Product.find(item.product_id) %>
+
+Product Name: <%= product.name %>
+Product Price: <%= humanized_money_with_symbol item.item_price %>
+Product Quantity: <%= item.quantity %>
+Product Total: <%= humanized_money_with_symbol item.total_price %>
+<% end %> -->

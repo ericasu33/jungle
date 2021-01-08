@@ -12,7 +12,16 @@ class OrdersController < ApplicationController
     charge = perform_stripe_charge
     order  = create_order(charge)
 
+    order_session_id = {
+      order_id: order.id,
+      session_id: session[:user_id]
+    }
+
     if order.valid?
+      if session[:user_id]
+        p OrderReceiptMailer.order_receipt(order_session_id).deliver_now
+      end
+
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'
     else
