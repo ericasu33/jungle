@@ -10,17 +10,13 @@
 
     <tbody>
       <tr>
-        <td>Products</td>
+        <td><%= link_to "Products", admin_products_path %></td>
         <td> <%= @products %> </td>
       </tr>
 
       <tr>
-        <td>Category</td>
+        <td><%= link_to "Category", admin_categories_path %></td>
         <td> <%= @categories %> </td>
       </tr>
     </tbody>
   </table>
-
-<div>
-  <%= link_to "Product Index", admin_products_path %>
-</div>

@@ -8,18 +8,17 @@
     <%= link_to '+ New Category', new_admin_category_path, class: 'btn btn-info' %>
   </div>
 
-  <div>
-
+  <div class="container-fluid">
     <table class="table table-bordered">
       <thead>
-        <tr>
-          <th>Categories</th>
+        <tr class="d-flex">
+          <th class="col">Categories</th>
         </tr>
       </thead>
       <tbody>
       <% @categories.each do |category| %>
-        <tr>
-          <td>
+        <tr class="d-flex">
+          <td class="col">
             <%= category.name %>
           </td>
         </tr>
