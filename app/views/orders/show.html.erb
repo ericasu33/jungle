@@ -7,7 +7,9 @@
 
 
   <div class="order-summary jumbotron">
-    <h3> Dear <%= @order.email %>,  </h3>
+  
+    <h3> Dear <%= @user ? @user.email : "Visitor" %>, </h3>
+
     <h4>Thank you for your order!</h4>
 
   <table class="table table-bordered">
