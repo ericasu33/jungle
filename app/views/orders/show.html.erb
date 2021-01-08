@@ -24,10 +24,11 @@
       </tr>
     </thead>
 
-    <% @order.line_items.each do |item| %>
-      <%= render 'item', product: Product.find(item.product_id), item: item %>
-
-    <% end %>
+    <tbody>
+      <% @order.line_items.each do |item| %>
+        <%= render 'item', product: Product.find(item.product_id), item: item %>
+      <% end %>
+    </tbody>
 
     <tfoot>
       <tr>
@@ -35,8 +36,8 @@
           ORDER TOTAL:
         </th>
         <th>
-            <%= humanized_money_with_symbol @order.total %>
-          </th>
+          <%= humanized_money_with_symbol @order.total %>
+        </th>
       </tr>
     </tfoot>
 
