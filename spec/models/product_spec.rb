@@ -4,20 +4,21 @@ RSpec.describe Product, type: :model do
   before(:each) do
     @category = Category.new(:name => "Furniture")
     @category.save!
+
+    @product = Product.new
+    @product.name = "Shelf"
+    @product.price = 555
+    @product.quantity = 3
+    @product.category = @category
   end
 
   describe 'Validation' do
     it 'should save successfuly with all four fields (name, price, quantity, category) set' do
-      @product = Product.new(:name => "Shelf", :price_cents => 10000, :quantity => 5, :category => @category)
-
       @product.save!
     end
 
     it 'should validate that name input is requried' do
-      @product = Product.new
-      @product.price = 10000
-      @product.quantity = 3
-      @product.category = @category
+      @product.name = nil
 
       @product.save
       expect(@product.errors.full_messages).to be_present
@@ -34,20 +35,14 @@ RSpec.describe Product, type: :model do
     end
 
     it 'should validate that quantity input is requried' do
-      @product = Product.new
-      @product.name = "Shelf"
-      @product.price = 10000
-      @product.category = @category
+      @product.quantity = nil
 
       @product.save
       expect(@product.errors.full_messages).to be_present
     end
 
-    it 'should validate that quantity input is requried' do
-      @product = Product.new
-      @product.name = "Shelf"
-      @product.price = 10000
-      @product.quantity = 5
+    it 'should validate that category input is requried' do
+      @product.category = nil 
 
       @product.save
       expect(@product.errors.full_messages).to be_present
