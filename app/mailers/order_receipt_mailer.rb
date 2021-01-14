@@ -1,5 +1,5 @@
 class OrderReceiptMailer < ApplicationMailer
-  default from: 'ericasu33@gmail.com'
+  default from: 'default@gmail.com'
   
   def order_receipt(order_session_id_hash)
     @user = User.find(order_session_id_hash[:session_id])

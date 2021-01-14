@@ -1,7 +1,17 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by exawmple.
 
+# Features
+* Add/Delete Products
+* Add Categories
+* Admin Dashboard
+* Sends confirmation email to registered user
+  - To use this funciton, please replace "default@gmail.com" with your own email in the following files:
+   - application_mailer.rb
+   - order_receipt_mailer.rb
+   - development.rb
+      => For this file, if your email is not gmail, make sure you modify the remaining smtp_settings accordingly.
 
 ## Setup
 
