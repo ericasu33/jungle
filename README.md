@@ -2,6 +2,11 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by exawmple.
 
+## ScreenShots
+!["Homepage"](https://github.com/ericasu33/jungle/blob/master/public/Screen%20Shot%202021-01-13%20at%204.12.33%20PM.png?raw=true)
+!["My Cart"](https://github.com/ericasu33/jungle/blob/master/public/Screen%20Shot%202021-01-13%20at%204.13.26%20PM.png?raw=true)
+!["Order Confirmation"](https://github.com/ericasu33/jungle/blob/master/public/Screen%20Shot%202021-01-13%20at%204.14.10%20PM.png?raw=true)
+
 # Features
 * Add/Delete Products
 * Add Categories
